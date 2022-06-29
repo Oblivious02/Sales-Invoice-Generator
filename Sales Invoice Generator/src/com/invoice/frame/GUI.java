@@ -297,7 +297,14 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
     }
 
     private void createButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        modelInvoice.addRow(new Object[] {});
+        int count = modelInvoice.getRowCount();
+        if (count == 0)
+            modelInvoice.addRow(new Object[] {1});
+        else {
+            modelInvoice.addRow(new Object[] {
+                    Integer.parseInt(invoiceTable.getValueAt(count - 1, 0).toString()) + 1
+            });
+        }
     }
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -490,7 +497,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                         }
                     }
                  }
-//              System.out.println(invoiceHeaders);    //TODO test
+              System.out.println(invoiceHeaders);
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace(); //TODO add a function dialogue

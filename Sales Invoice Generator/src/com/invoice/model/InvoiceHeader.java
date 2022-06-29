@@ -64,11 +64,11 @@ public class InvoiceHeader {
 
     @Override
     public String toString() {
-        return "InvoiceHeader{" +
-                "num=" + num +
-                ", customerName='" + customerName + '\'' +
-                ", date='" + date + '\'' +
-                ", lines=" + lines +
-                '}';
+        return "Invoice num " + num +
+                "\n{" +
+                "\ndate='" + date + '\'' +
+                ", Customer Name='" + customerName + '\'' +
+                "\n" + lines +
+                "\n}\n";
     }
 }

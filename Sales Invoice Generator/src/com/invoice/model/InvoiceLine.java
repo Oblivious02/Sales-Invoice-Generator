@@ -47,11 +47,8 @@ public class InvoiceLine {
 
     @Override
     public String toString() {
-        return "InvoiceLine{" +
-                "itemName='" + itemName + '\'' +
-                ", itemPrice=" + itemPrice +
-                ", itemCount=" + itemCount +
-                '}';
+        return
+                itemName + ", " + itemPrice + ", " +itemCount + "\n";
     }
 
     public void setHeader(InvoiceHeader header) {
